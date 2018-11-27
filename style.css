@@ -1,0 +1,83 @@
+body{
+background: #5599ca;
+color: #376483;
+font:15px calibri, sans-serif;
+}
+input {
+background-color: #90bddc;
+color: #5599ca;
+font:15px calibri, sans-serif;
+}
+select {
+background-color: #90bddc;
+color: #5599ca;
+font:15px calibri, sans-serif;
+}
+table {
+margin:auto;
+font:15px calibri, sans-serif;
+}
+tr {
+background-color: #90bddc;
+color: #5599ca;
+font:15px calibri, sans-serif;
+}
+a:link {
+color: #90bddc;
+text-decoration: none;
+font:15px calibri, sans-serif;
+}
+a:visited{
+color: #5599ca;
+text-decoration: none;
+font:15px calibri, sans-serif;
+}
+a:hover{
+color: #5599ca;
+text-decoration: underline;
+font:15px calibri, sans-serif;
+}
+a:active{
+color: #5599ca;
+text-decoration: none;
+font:15px calibri, sans-serif;
+}
+#header {
+height:35px;
+background:#376483;
+color:#5599ca;
+text-align:center;
+font:15px calibri, sans-serif;
+}
+#side {
+height:600px;
+width:100px;
+float:left;
+text-align:center;
+background: #376483;
+color: #5599ca;
+font:15px calibri, sans-serif;
+}
+#main {
+height:600px;
+float:center;
+text-align:center;
+vertical-align:top;
+align:center;
+background:#5599ca;
+color:#376483;
+font:15px calibri, sans-serif;
+}
+#flip {
+color: #5599ca;
+background-color: #376483;
+text-align: center;
+margin:auto;
+font:15px calibri, sans-serif;
+}
+#panel {
+background-color: #376483;
+margin:auto;
+text-align: center;
+font:15px calibri, sans-serif;
+}
