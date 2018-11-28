@@ -12,6 +12,38 @@ $controller->addStock();
 <title>Cards 101</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+function readURL(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+reader.onload = function (e) {
+$("#preview").prop("src", e.target.result);
+}
+reader.readAsDataURL(input.files[0]);
+}
+}
+$("#image").change(function () {
+if ($(this).val() != "") {
+var ext = $(this).val().match(/\.(.+)$/)[1];
+if (ext == "jpg") {
+$("#preview").prop("hidden", false);
+readURL(this);
+fileUploaded = true;
+}
+else {
+$("#preview").prop("hidden", true);
+fileUploaded = false;
+}
+}
+else {
+$("#preview").prop("hidden", true);
+fileUploaded = false;
+}
+});
+});
+</script>
 <div id="header">
 <h1>Cards 101</h1>
 </div>
@@ -33,7 +65,7 @@ Code: <input type="text" id="code" name="code"/> <br>
 
 Description: <input type="text" id="description" name="description"/> <br>
 
-Price per unit (£): <input type="text" id="priceunit" name="priceunit"/> <br>
+Price per unit (&pound): <input type="text" id="priceunit" name="priceunit"/> <br>
 
 Image: <input type="file" id="image" name="image" /><br />
 <img id="preview" src="" hidden="hidden" style="width:auto; height:150px" /> <br />

@@ -31,6 +31,8 @@ var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
 var object = JSON.parse(this.responseText);
+document.getElementById('image').hidden = false;
+document.getElementById('image').src = "Images/" + object.Code + ".jpg";
 document.getElementById('description').innerHTML = object.Description;
 document.getElementById('price').innerHTML = "&pound" + object.PricePerUnit;
 }
@@ -41,6 +43,7 @@ xhr.send('stock=' + id);
 }
 else
 {
+document.getElementById('image').hidden = true;
 document.getElementById('description').innerHTML = "";
 document.getElementById('price').innerHTML = "";
 }
@@ -150,6 +153,7 @@ $i++;
 }
 ?>
 </select> <br>
+<img id="image" src="" style="width:auto; height:150px" hidden><br>
 <b>Description:</b> <label id="description"></label> <br>
 <b>Price per unit:</b> <label id="price"></label> <br>
 <b>Quantity:</b> <input type="number" id="quantity" name="quantity"><br>
